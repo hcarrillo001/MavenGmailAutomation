@@ -64,6 +64,7 @@ public class GmailAutomation {
                 driver.findElement(By.xpath("//*[@role='button' and text()='Send']")).click();
                 testNumber++;
                 Thread.sleep(5000);
+                 System.out.println("Email Sent");
              }
              
              //testing gitgit
