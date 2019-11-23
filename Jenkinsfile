@@ -1,15 +1,9 @@
 pipeline {
-  agent {
-    docker {
-      image 'maven:3.3.9-jdk-8'
-    }
-
-  }
+  agent none
   stages {
     stage('Build') {
       steps {
-        sh '''mvn clean package
-'''
+        sh 'clean install compile exec:java -Dexec.mainClass="com.hcarrill.mavengmailautomation.GmailAutomation"'
       }
     }
   }
